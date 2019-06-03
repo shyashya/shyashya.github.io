@@ -269,6 +269,166 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/03/Mac下使用Bert的一些环境配置（记录）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shya">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/qc.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小青菜">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/06/03/Mac下使用Bert的一些环境配置（记录）/" itemprop="url">Mac下使用Bert的一些环境配置（记录）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-03T15:25:15+08:00">
+                2019-06-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境配置/" itemprop="url" rel="index">
+                    <span itemprop="name">环境配置</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Mac-下-使用Bert的一些环境配置（记录）"><a href="#Mac-下-使用Bert的一些环境配置（记录）" class="headerlink" title="Mac 下 使用Bert的一些环境配置（记录）"></a>Mac 下 使用Bert的一些环境配置（记录）</h3><h4 id="anaconda管理python版本"><a href="#anaconda管理python版本" class="headerlink" title="anaconda管理python版本"></a>anaconda管理python版本</h4><p>查看电脑当前的python版本</p>
+<p><code>python --version</code></p>
+<p>如果电脑的版本是3.7的，那么使用以下命令来创建2.7版本的</p>
+<p><code>conda create -n python27 python=2.7</code></p>
+<p>然后通过下面这个命令激活刚刚创建的python2.7</p>
+<p><code>conda activate python27</code></p>
+<p>如果不需要使用python2.7版本的，通过下面的来关闭,这样就会到了原始的版本</p>
+<p><code>conda deactivate</code></p>
+<h4 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h4><p>先建立tensorflow运行环境</p>
+<p><code>conda create -n tensorflow python=2.7</code></p>
+<p>然后激活刚刚的环境（与上面类似）</p>
+<p><code>conda activate tensorflow</code></p>
+<p>最后执行下面的命令来安装tensorflow</p>
+<p><code>pip install tensorflow</code></p>
+<p>进入python环境，执行以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">hello = tf.constant(&apos;Hello, Tensorflow!&apos;)</span><br><span class="line">sess = tf.Session()</span><br><span class="line">print(sess.run(hello))</span><br><span class="line"></span><br><span class="line">a = tf.constant(66)</span><br><span class="line">b = tf.constant(88)</span><br><span class="line">print(sess.run(a + b))</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, Tensorflow!</span><br><span class="line">154</span><br></pre></td></tr></table></figure>
+<p>那么就成功了</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/10/new-post/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -573,7 +733,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -584,7 +744,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -595,7 +755,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
