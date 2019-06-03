@@ -362,27 +362,20 @@
       
         
           
-            <h4 id="anaconda管理python版本"><a href="#anaconda管理python版本" class="headerlink" title="anaconda管理python版本"></a>anaconda管理python版本</h4><p>查看电脑当前的python版本</p>
-<p><code>python --version</code></p>
-<p>如果电脑的版本是3.7的，那么使用以下命令来创建2.7版本的</p>
-<p><code>conda create -n python27 python=2.7</code></p>
-<p>然后通过下面这个命令激活刚刚创建的python2.7</p>
-<p><code>conda activate python27</code></p>
-<p>如果不需要使用python2.7版本的，通过下面的来关闭,这样就会到了原始的版本</p>
-<p><code>conda deactivate</code></p>
-<h4 id="安装tensorflow"><a href="#安装tensorflow" class="headerlink" title="安装tensorflow"></a>安装tensorflow</h4><p>先建立tensorflow运行环境</p>
-<p><code>conda create -n tensorflow python=2.7</code></p>
-<p>然后激活刚刚的环境（与上面类似）</p>
-<p><code>conda activate tensorflow</code></p>
-<p>最后执行下面的命令来安装tensorflow</p>
-<p><code>pip install tensorflow</code></p>
-<p>进入python环境，执行以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">hello = tf.constant(&apos;Hello, Tensorflow!&apos;)</span><br><span class="line">sess = tf.Session()</span><br><span class="line">print(sess.run(hello))</span><br><span class="line"></span><br><span class="line">a = tf.constant(66)</span><br><span class="line">b = tf.constant(88)</span><br><span class="line">print(sess.run(a + b))</span><br></pre></td></tr></table></figure>
-<p>输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello, Tensorflow!</span><br><span class="line">154</span><br></pre></td></tr></table></figure>
-<p>那么就成功了</p>
-
-          
+          anaconda管理python版本查看电脑当前的python版本
+python --version
+如果电脑的版本是3.7的，那么使用以下命令来创建2.7版本的
+conda create -n python27 python=2.7
+然后通过下面这个命令激活刚刚创建的python2.7
+conda
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/06/03/Mac下使用Bert的一些环境配置（记录）/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -522,8 +515,15 @@
       
         
           
-            
           
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/10/new-post/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -641,17 +641,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/05/10/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
