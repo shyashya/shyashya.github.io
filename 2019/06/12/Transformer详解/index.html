@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Bert,">
 
 
 
@@ -79,14 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="Transformer由论文《Attention is All You Need》提出，现在是谷歌云TPU推荐的参考模型。论文相关的Tensorflow的代码可以从GitHub获取，其作为Tensor2Tensor包的一部分。哈佛的NLP团队也实现了一个基于PyTorch的版本，并注释该论文。 首先将这个模型看成黑箱操作，在机器翻译中，这个就是输入一种语言，然后输出另一种语言。它由编码器和解码器构">
+<meta name="keywords" content="Bert">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Transformer详解">
+<meta property="og:url" content="http://yoursite.com/2019/06/12/Transformer详解/index.html">
 <meta property="og:site_name" content="小青菜">
+<meta property="og:description" content="Transformer由论文《Attention is All You Need》提出，现在是谷歌云TPU推荐的参考模型。论文相关的Tensorflow的代码可以从GitHub获取，其作为Tensor2Tensor包的一部分。哈佛的NLP团队也实现了一个基于PyTorch的版本，并注释该论文。 首先将这个模型看成黑箱操作，在机器翻译中，这个就是输入一种语言，然后输出另一种语言。它由编码器和解码器构">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-12T03:46:59.291Z">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4126392950,3341841386&fm=173&app=49&f=JPEG?w=640&h=449&s=CFE0A052198F50C8047D40DA0100F0B2">
+<meta property="og:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=102064403,905657909&fm=173&app=49&f=JPEG?w=640&h=399&s=04F274320BCF414952E9E1C8020030B2">
+<meta property="og:updated_time" content="2019-06-12T12:01:25.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Transformer详解">
+<meta name="twitter:description" content="Transformer由论文《Attention is All You Need》提出，现在是谷歌云TPU推荐的参考模型。论文相关的Tensorflow的代码可以从GitHub获取，其作为Tensor2Tensor包的一部分。哈佛的NLP团队也实现了一个基于PyTorch的版本，并注释该论文。 首先将这个模型看成黑箱操作，在机器翻译中，这个就是输入一种语言，然后输出另一种语言。它由编码器和解码器构">
+<meta name="twitter:image" content="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4126392950,3341841386&fm=173&app=49&f=JPEG?w=640&h=449&s=CFE0A052198F50C8047D40DA0100F0B2">
 
 
 
@@ -116,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/12/Transformer详解/">
 
 
 
 
 
-  <title>categories | 小青菜</title>
+  <title>Transformer详解 | 小青菜</title>
   
 
 
@@ -257,40 +264,148 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/12/Transformer详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="shya">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/qc.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小青菜">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                2 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/环境配置/">环境配置</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/自然语言处理/">自然语言处理</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Transformer详解</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-12T19:25:32+08:00">
+                2019-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Transformer由论文<a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">《Attention is All You Need》</a>提出，现在是谷歌云TPU推荐的参考模型。论文相关的Tensorflow的代码可以从GitHub获取，其作为Tensor2Tensor包的一部分。哈佛的NLP团队也实现了一个基于PyTorch的版本，并注释该论文。</p>
+<p>首先将这个模型看成黑箱操作，在机器翻译中，这个就是输入一种语言，然后输出另一种语言。它由编码器和解码器构成</p>
+<p><img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4126392950,3341841386&amp;fm=173&amp;app=49&amp;f=JPEG?w=640&amp;h=449&amp;s=CFE0A052198F50C8047D40DA0100F0B2" alt="transformer 图片"></p>
+<p>一个编码器的内部</p>
+<p><img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=102064403,905657909&amp;fm=173&amp;app=49&amp;f=JPEG?w=640&amp;h=399&amp;s=04F274320BCF414952E9E1C8020030B2" alt="一个编码器"></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Bert/" rel="tag"># Bert</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/03/Mac下使用Bert的一些环境配置（记录）/" rel="next" title="Mac下使用Bert的一些环境配置（记录）">
+                <i class="fa fa-chevron-left"></i> Mac下使用Bert的一些环境配置（记录）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
