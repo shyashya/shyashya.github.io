@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="小青菜">
 <meta property="og:description" content="anaconda管理python版本查看电脑当前的python版本 python --version 如果电脑的版本是3.7的，那么使用以下命令来创建2.7版本的 conda create -n python27 python=2.7 然后通过下面这个命令激活刚刚创建的python2.7 conda activate python27 如果不需要使用python2.7版本的，通过下面的来关闭,这样">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-13T11:31:14.679Z">
+<meta property="og:updated_time" content="2019-06-13T11:36:18.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下使用Bert的一些环境配置（记录）">
 <meta name="twitter:description" content="anaconda管理python版本查看电脑当前的python版本 python --version 如果电脑的版本是3.7的，那么使用以下命令来创建2.7版本的 conda create -n python27 python=2.7 然后通过下面这个命令激活刚刚创建的python2.7 conda activate python27 如果不需要使用python2.7版本的，通过下面的来关闭,这样">
@@ -391,8 +391,13 @@
 <p>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.mirrors.ustc.edu.cn/simple/</a></p>
 <p>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a></p>
 <p>如果出现源不受信任的提示，那么就可以这样写</p>
-<figure class="highlight plain"><figcaption><span>install xx -i</span><a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">--trusted-host pypi.tuna.tsinghua.edu.cn```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 直接改变默认源，这样就不用每次在后面添加一大串了</span><br><span class="line"></span><br><span class="line">   当前的虚拟环境下面新建`pip.conf`文件</span><br><span class="line"></span><br><span class="line">   `cd  ~/`</span><br><span class="line"></span><br><span class="line">   `mkdir .pip`</span><br><span class="line"></span><br><span class="line">   `cd .pip`</span><br><span class="line"></span><br><span class="line">   `touch pip.conf `</span><br><span class="line"></span><br><span class="line">   `vim pip.conf`</span><br><span class="line"></span><br><span class="line">   打开以后添加以下代码</span><br></pre></td></tr></table></figure>
-<p>[global]<br>index-url = <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a> #这个pypi源自己定义<br>[install]<br>trusted-host=pypi.tuna.tsinghua.edu.cn  # 这个也是根据pypi源自己定义<br><code>`</code></p>
+<p><code>pip install xx -i https://pypi.tuna.tsinghua.edu.cn/simple/ --trusted-host pypi.tuna.tsinghua.edu.cn</code></p>
+</li>
+<li><p>直接改变默认源，这样就不用每次在后面添加一大串了</p>
+<p>当前的虚拟环境下面新建pip.conf文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd ~/</span><br><span class="line"></span><br><span class="line">mkdir .pip</span><br><span class="line"></span><br><span class="line">cd .pip</span><br><span class="line"></span><br><span class="line">touch pip.conf </span><br><span class="line"></span><br><span class="line">vim pip.conf</span><br></pre></td></tr></table></figure>
+<p>打开以后添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple/ #这个pypi源自己定义</span><br><span class="line">[install]</span><br><span class="line">trusted-host=pypi.tuna.tsinghua.edu.cn  # 这个也是根据pypi源自己定义</span><br></pre></td></tr></table></figure>
 <p>然后以后默认就是清华的源了</p>
 </li>
 </ol>
