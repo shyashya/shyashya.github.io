@@ -301,8 +301,7 @@
           
 
   
-
-
+  
 
         </div>
         
@@ -564,6 +563,29 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'xxxxxx',
+          clientSecret: 'xxxxxxxxxxxx',
+          repo: 'gitalk',
+          owner: 'iosite',
+          admin: ['iosite'],
+          id: location.pathname,
+          labels: ['Gitalk'],
+          perPage: 15,
+          pagerDirection: 'last',
+          createIssueManually: true,
+          distractionFreeMode: false
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+.gt-container a{border-bottom: none;}
   
 
 
