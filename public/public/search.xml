@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo-next主题踩坑记录</title>
+      <link href="/2020/03/08/hexo-next%E4%B8%BB%E9%A2%98%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
+      <url>/2020/03/08/hexo-next%E4%B8%BB%E9%A2%98%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>说明：本篇记录了hexo部署以后关于<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">NexT.Mist</a> v5.1.4版本添加评论、搜索功能、统计访问量以及人数、添加看板娘的步骤及填坑方法（持续更新～）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ocrmypdf</title>
       <link href="/2020/03/04/ocrmypdf%20usage/"/>
       <url>/2020/03/04/ocrmypdf%20usage/</url>
