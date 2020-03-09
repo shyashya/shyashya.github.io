@@ -17,21 +17,21 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/public/search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.7.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/public/search.xml"};
   </script>
 
-  <meta name="description" content="说明：在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用tesseract命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。 Mac安装ocrmypdf以及使用命令 使用brew安装ocrmypdf brew install ocrmypdf  下载语言库，地址github语言库 注意：此github库完全c">
+  <meta name="description" content="在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用`tesseract`命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。">
 <meta name="keywords" content="ocrmypdf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ocrmypdf">
 <meta property="og:url" content="http://yoursite.com/2020/03/04/ocrmypdf usage/index.html">
 <meta property="og:site_name" content="小青菜">
-<meta property="og:description" content="说明：在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用tesseract命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。 Mac安装ocrmypdf以及使用命令 使用brew安装ocrmypdf brew install ocrmypdf  下载语言库，地址github语言库 注意：此github库完全c">
+<meta property="og:description" content="在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用`tesseract`命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-03-06T05:09:39.874Z">
+<meta property="og:updated_time" content="2020-03-09T03:30:04.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ocrmypdf">
-<meta name="twitter:description" content="说明：在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用tesseract命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。 Mac安装ocrmypdf以及使用命令 使用brew安装ocrmypdf brew install ocrmypdf  下载语言库，地址github语言库 注意：此github库完全c">
+<meta name="twitter:description" content="在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用`tesseract`命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。">
 
 <link rel="canonical" href="http://yoursite.com/2020/03/04/ocrmypdf usage/">
 
@@ -105,6 +105,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -138,9 +139,37 @@
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="search-pop-overlay">
+  <div class="popup search-popup">
+      <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  </div>
 </div>
     </header>
 
@@ -167,7 +196,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/ocrmypdf usage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/qc.jpg">
       <meta itemprop="name" content="shya">
       <meta itemprop="description" content>
     </span>
@@ -194,7 +223,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-06 13:09:39" itemprop="dateModified" datetime="2020-03-06T13:09:39+08:00">2020-03-06</time>
+                <time title="Modified: 2020-03-09 11:30:04" itemprop="dateModified" datetime="2020-03-09T11:30:04+08:00">2020-03-09</time>
               </span>
 
           
@@ -205,6 +234,7 @@
               <span class="post-meta-item-text">Views: </span>
               <span id="busuanzi_value_page_pv"></span>
             </span>
+            <div class="post-description">在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用`tesseract`命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。</div>
 
         </div>
       </header>
@@ -215,8 +245,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>说明：在Mac系统中安装ocrmypdf，可以使用此命令将图片版的pdf文件，转成文字版的pdf。另外，安装成功之后，还可以使用<code>tesseract</code>命令将文字版图片，转成文本文档。在mac、linux系统中均可使用。</p>
-<h4 id="Mac安装ocrmypdf以及使用命令"><a href="#Mac安装ocrmypdf以及使用命令" class="headerlink" title="Mac安装ocrmypdf以及使用命令"></a>Mac安装ocrmypdf以及使用命令</h4><ol>
+        <h4 id="Mac安装ocrmypdf以及使用命令"><a href="#Mac安装ocrmypdf以及使用命令" class="headerlink" title="Mac安装ocrmypdf以及使用命令"></a>Mac安装ocrmypdf以及使用命令</h4><ol>
 <li><p>使用brew安装ocrmypdf</p>
 <p><code>brew install ocrmypdf</code></p>
 </li>
@@ -251,6 +280,43 @@
     
     
     
+        <div class="reward-container">
+  <div>客官，投个币吧 ฅ՞•ﻌ•՞ฅ</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="shya WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="shya Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>shya
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://yoursite.com/2020/03/04/ocrmypdf usage/" title="ocrmypdf">http://yoursite.com/2020/03/04/ocrmypdf usage/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -335,6 +401,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="shya" src="/images/qc.jpg">
   <p class="site-author-name" itemprop="name">shya</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -361,6 +428,9 @@
       </div>
   </nav>
 </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -380,7 +450,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2019 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
@@ -444,6 +514,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 
